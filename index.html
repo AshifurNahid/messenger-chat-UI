@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat UI</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+  </head>
+  <body>
+    <div id="chat-bubble">
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="user-avatar" onclick="openChatBubble()">
+            <div class="img-container profile-img">
+              <img
+                class="profile-img"
+                src="https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/411237358_3506985462874497_1107814466831275566_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeE_BpesfluH1Vah4Job81_HDC9E1Tp-gPYML0TVOn6A9nfSrmIietxikX11_UuLF7cv5pdI7JmjzGCuFJRDFmS2&_nc_ohc=T4IMQ-T2wAwAX9lzZND&_nc_ht=scontent.fdac151-1.fna&oh=00_AfDTd-AstIxziSPniHbV0QVVJWdpF3NikGONvxZPxOFD-w&oe=65AAED10"
+              />
+            </div>
+            <div class="user-status-info">
+              <a href="#">John Doe</a>
+              <p>Active now</p>
+            </div>
+          </div>
+
+          <div class="chat-comm">
+            <nav>
+              <a href="#">
+                <img src="./icons/call.svg" />
+              </a>
+              <a href="#">
+                <img src="./icons/settings.svg" />
+              </a>
+              <a href="#" onclick="openChatBubble()">
+                <img src="./icons/close.svg" />
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="chat-body">
+          <div class="sender-other">
+            <div class="user-avatar">
+              <div class="img-container">
+                <img
+                  src="https://scontent.fdac151-1.fna.fbcdn.net/v/t39.30808-6/411237358_3506985462874497_1107814466831275566_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeE_BpesfluH1Vah4Job81_HDC9E1Tp-gPYML0TVOn6A9nfSrmIietxikX11_UuLF7cv5pdI7JmjzGCuFJRDFmS2&_nc_ohc=T4IMQ-T2wAwAX9lzZND&_nc_ht=scontent.fdac151-1.fna&oh=00_AfDTd-AstIxziSPniHbV0QVVJWdpF3NikGONvxZPxOFD-w&oe=65AAED10"
+                />
+              </div>
+              <div class="other-message">Hi there!</div>
+            </div>
+          </div>
+          <div class="sender-me">
+            <div class="my-message">Hello</div>
+          </div>
+        </div>
+
+        <div class="chat-footer">
+          <div class="message-box">
+            <input type="textarea" placeholder="Type a message..." />
+          </div>
+          <button type="submit" class="message-submit">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openChatBubble() {
+        var element = document.getElementById("chat-bubble");
+        element.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
